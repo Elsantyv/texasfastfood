@@ -1,0 +1,340 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #A01027;
+}
+
+.logo img {
+    max-width: 100%;
+    width: 20rem;
+}
+
+
+/*=========================================
+Header
+==========================================*/
+
+.header {
+    background-color: WHITE;
+    max-width: auto;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menuHeader a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: BLACK;
+    padding: 0 1rem;
+    border-right: 2px solid yellow;
+}
+
+.menuHeader a:hover {
+    color: #A01027;
+}
+
+.menuHeader .whastapp {
+    background-color: #A01027;
+    border-radius: 10rem;
+    padding: 1rem 1.8rem;
+    color: WHITE;
+}
+
+.menuHeader .whastapp:hover {
+    color: WHITE;
+    background-color: GREEN;
+}
+
+
+/*=========================================
+Header
+==========================================*/
+
+.contenedor {
+    max-width: 85%;
+    height: auto;
+    margin: 0 auto;
+    background-color: WHITE;
+    border-radius: 0 0 10px 10px;
+}
+
+.fotos {
+    width: auto;
+    height: auto;
+}
+
+.img1 {
+    width: 325px;
+    height: 602px;
+}
+
+.img2 {
+    width: 646px;
+    height: 300px;
+}
+
+.img3 {
+    width: 319px;
+    height: 300px;
+}
+
+.fotos {
+    max-width: auto;
+    display: grid;
+    grid: repeat(3, 1fr)/repeat(4, 1fr);
+    row-gap: 1px;
+    column-gap: 1px;
+}
+
+.i1 {
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+
+.i6 {
+    grid-row: 2/4;
+    grid-column: 3/4;
+    width: 345px;
+}
+
+.i8 {
+    grid-row: 3/4;
+    grid-column: 1/3;
+}
+
+.i2 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+
+
+/*================================================
+conocenos
+=================================================*/
+
+.conocenos {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.texas {
+    display: flex;
+    flex-direction: row;
+}
+
+.texto h1,
+.mision h2,
+.vision h2,
+.objetivos h2,
+.salsa h2 {
+    color: #A01027;
+}
+
+.texto p {
+    font-size: 2.3rem;
+    padding: 0 2rem;
+}
+
+.texto i,
+.mision i,
+.vision i,
+.objetivos i,
+.salsa i {
+    color: yellow;
+}
+
+.descripcion {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 0;
+    align-items: center;
+}
+
+.mision,
+.vision {
+    padding: 0 2rem;
+}
+
+.mision p,
+.vision p,
+.objetivos li {
+    font-size: 1.5rem;
+}
+
+.objetivos li {
+    text-align: start;
+}
+
+
+/*================================================
+carta
+=================================================*/
+
+
+/*================================================
+Hamburguesas
+=================================================*/
+
+.productos {
+    padding: 0 14%;
+}
+
+.carta {
+    width: 1000px;
+    height: auto;
+    border: 1px solid #A01027;
+    border-radius: 10px;
+    margin: 2rem 0;
+    align-items: center;
+    text-align: center;
+}
+
+.hamburguesas {
+    text-align: center;
+    background-color: #A01027;
+    color: WHITE;
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+
+.hamburguesas h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.descripcionProductos {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*================================================
+Mostrar y esconder los productos
+=================================================*/
+
+.descripcionProductos .imagenProductos div {
+    display: none;
+}
+
+.descripcionProductos .imagenProductos div:target {
+    display: block;
+    transition: all 1s ease;
+}
+
+
+/*================================================
+=================================================*/
+
+.orgTitulos {
+    display: flex;
+    flex-direction: row;
+}
+
+.titulos {
+    width: 200px;
+    height: 120px;
+    background-color: #A01027;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2rem 0;
+    text-decoration: none;
+    color: WHITE;
+    border: 1px solid #b81933;
+}
+
+.titulos:hover {
+    background-color: #B81933;
+}
+
+.imagenProductos,
+.tamañoProductos {
+    width: 100%;
+    height: 600px;
+}
+
+.tamañoProductos p {
+    text-align: center;
+    padding: 0 2rem;
+    font-size: 18px;
+}
+
+.imagenProductos {
+    padding: 2rem 0;
+}
+
+
+/*================================================
+Salsas
+=================================================*/
+
+.salsa {
+    text-align: center;
+}
+
+.contenedorSalsas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.tamañoSalsa {
+    height: 600px;
+    width: 400px;
+    border: 1px solid #A01027;
+    border-radius: 10px 10px 0 0;
+    margin: 1rem 1rem;
+}
+
+.tamañoSalsa h3 {
+    font-size: 2rem;
+    color: #A01027;
+}
+
+.tamañoSalsa p {
+    background-color: #A01027;
+    padding: 1rem 0;
+    color: WHITE;
+    font-size: 1.8rem;
+}
+
+.imagenesSalsa {
+    height: 400px;
+    width: 250px;
+}
+
+.salsa h2 {
+    font-size: 2rem;
+}
+
+.salsa p {
+    font-size: 1.8rem;
+}
+
+
+/*================================================
+Footer
+=================================================*/
+
+footer p {
+    color: WHITE;
+    font-size: 2rem;
+    text-align: center;
+}
